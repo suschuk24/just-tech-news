@@ -4,6 +4,7 @@ const sequelize = require('../../config/connection');
 
 
 // get all users
+router.get('/', (req, res) => {
 Post.findAll({
     order: [['created_at', 'DESC']],
     attributes: [
@@ -29,12 +30,12 @@ Post.findAll({
       }
     ]
    })
-      .then(dbPostData => res.json(dbPostData))
+      .then(dbPostData => {res.json(dbPostData)})
       .catch(err => {
         console.log(err);
         res.status(500).json(err);
+    });
 });
-
 
 router.get('/:id', (req, res) => {
   Post.findOne({
