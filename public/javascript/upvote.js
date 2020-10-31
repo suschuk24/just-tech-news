@@ -16,10 +16,9 @@ async function upvoteClickHandler(event) {
         'Content-Type': 'application/json'
       }
     });
-console.log(response)
+
     if(response.ok) {
-      // console.log('is something happening')
-      // document.location.reload();
+      document.location.reload();
     } else {
       alert(response.statusText)
     }
