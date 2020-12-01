@@ -1,4 +1,4 @@
-# TJust Tech News
+# Just Tech News
 
 ## Description:
 
